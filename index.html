@@ -11,23 +11,23 @@
 <body>
     <canvas id="particles-canvas"></canvas>
     
-    <header class="header-glory">
-        <div class="logo">
-            <i class="fas fa-landmark logo-icon"></i> 
-            <span class="logo-text">JAMBI</span>
-            <span class="logo-subtext">HERITAGE</span>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Beranda</a></li>
-                <li><a href="#filosofi" class="nav-link">Adat & Filosofi</a></li>
-                <li><a href="#galeri" class="nav-link">Galeri</a></li>
-                <li><a href="#arkeologi" class="nav-link">Ekspedisi</a></li>
-                <li><a href="#seni" class="nav-link">Seni</a></li>
-            </ul>
-        </nav>
-        <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
-    </header>
+<header class="header-glory">
+    <div class="logo">
+        <i class="fas fa-landmark logo-icon"></i> 
+        <span class="logo-text">JAMBI</span>
+        <span class="logo-subtext">HERITAGE</span>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Beranda</a></li>
+            <li><a href="#filosofi" class="nav-link">Adat & Filosofi</a></li>
+            <li><a href="#galeri" class="nav-link">Galeri</a></li>
+            <li><a href="#sejarah" class="nav-link">Sejarah</a></li> <li><a href="#arkeologi" class="nav-link">Ekspedisi</a></li>
+            <li><a href="#seni" class="nav-link">Seni</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+</header>
 
     <section class="hero cinematic-hero" id="home">
         <div class="hero-content reveal">
@@ -218,35 +218,73 @@
     </div>
 </section>
 
-        <section id="sejarah" class="history-section reveal">
+<section id="sejarah" class="history-section reveal">
     <div class="container">
-        <h2 class="section-title title-glory">Lorong Waktu <span>Sejarah</span></h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Abad ke-7</div>
-                <div class="timeline-content">
-                    <h3>Kerajaan Melayu Kuno</h3>
-                    <p>Jambi merupakan pusat Kerajaan Melayu yang menjadi titik penting perdagangan jalur sutra dan pusat belajar agama Budha di Asia Tenggara (Situs Muaro Jambi).</p>
+        <h2 class="section-title title-glory">Jejak Masa <span>Jambi</span></h2>
+        <p class="section-desc" style="text-align: center; margin-bottom: 30px;">Menelusuri transformasi Jambi dari pusat pembelajaran Buddha hingga kesultanan Islam yang megah.</p>
+        
+        <div class="era-tabs">
+            <button class="era-btn active" onclick="openEra(event, 'era-kuno')">
+                <i class="fas fa-gopuram"></i> Era Melayu Kuno
+            </button>
+            <button class="era-btn" onclick="openEra(event, 'era-sultan')">
+                <i class="fas fa-mosque"></i> Era Kesultanan
+            </button>
+            <button class="era-btn" onclick="openEra(event, 'era-juang')">
+                <i class="fas fa-fist-raised"></i> Era Perjuangan
+            </button>
+        </div>
+
+        <div id="era-kuno" class="era-content active-content">
+            <div class="era-grid">
+                <div class="era-text">
+                    <h3>Pusat Peradaban Asia (Abad 7 - 14 M)</h3>
+                    <p>Pada masa ini, Jambi dikenal sebagai pusat Kerajaan Melayu yang menjadi titik temu pedagang dunia dan pusat pembelajaran agama Buddha.</p>
+                    <ul class="era-list">
+                        <li><strong>Candi Muaro Jambi:</strong> Kompleks candi bata merah terluas di Asia Tenggara, tempat biksu I-Tsing pernah singgah.</li>
+                        <li><strong>Sungai Batanghari:</strong> "Jalur Sutra" air yang menghubungkan pedalaman Sumatera dengan dunia luar.</li>
+                        <li><strong>Aksara Incung:</strong> Warisan literasi kuno Kerinci yang ditulis pada bambu dan tanduk kerbau, bukti tingginya peradaban tulis-menulis.</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Abad ke-15</div>
-                <div class="timeline-content">
-                    <h3>Era Putri Pinang Masak</h3>
-                    <p>Legenda kepemimpinan seorang putri cantik yang menyatukan wilayah Jambi dan awal mula berdirinya Kesultanan Jambi yang bercorak Islam.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Era Kolonial</div>
-                <div class="timeline-content">
-                    <h3>Sultan Thaha Syaifuddin</h3>
-                    <p>Perlawanan gigih pahlawan nasional dari Jambi melawan Belanda hingga titik darah penghabisan di Tanah Garo.</p>
+                <div class="era-img">
+                    <img src="./Candi_Muaro_Jambi_dengan_langit_biru.jpg" alt="Candi Muaro Jambi">
                 </div>
             </div>
         </div>
+
+        <div id="era-sultan" class="era-content">
+            <div class="era-grid">
+                <div class="era-text">
+                    <h3>Bangkitnya Panji Islam (Abad 15 - 19 M)</h3>
+                    <p>Transformasi budaya dimulai dengan berdirinya Kesultanan Jambi. Adat istiadat mulai diselaraskan dengan syariat Islam.</p>
+                    <ul class="era-list">
+                        <li><strong>Orang Kayo Hitam:</strong> Tokoh legendaris pendiri kejayaan Jambi yang sakti mandraguna.</li>
+                        <li><strong>Keris Siginjai:</strong> Pusaka kebesaran kesultanan yang menjadi simbol kekuasaan dan kedaulatan raja.</li>
+                        <li><strong>Putri Pinang Masak:</strong> Simbol penyatuan wilayah dan kepemimpinan wanita yang bijaksana.</li>
+                    </ul>
+                </div>
+                <div class="era-img">
+                    <img src="https://static.promediateknologi.id/crop/0x0:0x0/1200x600/webp/photo/p1/591/2024/09/29/IMG_20240929_104052_800_x_450_piksel-3362156400.jpg" alt="Kesultanan Jambi">
+                </div>
+            </div>
+        </div>
+
+        <div id="era-juang" class="era-content">
+            <div class="era-grid">
+                <div class="era-text">
+                    <h3>Perlawanan Menuju Merdeka (Abad 19 - 20 M)</h3>
+                    <p>Masa heroik ketika rakyat Jambi mengangkat senjata melawan kolonialisme Belanda demi mempertahankan tanah air.</p>
+                    <ul class="era-list">
+                        <li><strong>Sultan Thaha Syaifuddin:</strong> Pahlawan Nasional yang menolak tunduk pada Belanda, bergerilya hingga titik darah penghabisan di Tanah Garo.</li>
+                        <li><strong>Perang Jambi:</strong> Salah satu perang terlama di Sumatera yang menguras kas kolonial Belanda.</li>
+                    </ul>
+                </div>
+                <div class="era-img">
+                    <img src="https://media.indozone.id/crop/0x0:0x0/images/2025/09/15/1757921366_68c7c056c0b26_1000321085.jpg" alt="Sultan Thaha">
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 <section id="rimba" class="content-section reveal">
